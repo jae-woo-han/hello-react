@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 class EventPractice extends Component {
   state = {
-    username: "",
+    username: '',
     message: '',
   };
 
@@ -19,10 +19,10 @@ class EventPractice extends Component {
   }
 
   handleClick=()=>{
-      alert(this.state.username + " : "+ this.state.message);
+      alert(this.state.username + ' : '+ this.state.message);
       this.setState({
-          username : "",
-          message: ""
+          username : '',
+          message: ''
       });
   }
 
