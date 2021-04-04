@@ -5,6 +5,25 @@ class EventPractice extends Component {
     message: '',
   };
 
+  constructor(props){
+      super(props);
+      this.handleChange = this.handleChange.bind(this);
+      this.handleClick = this.handleClick.bind(this);
+  }
+
+  handleChange(e){
+      this.setState({
+          message: e.target.value
+      });
+  }
+
+  handleClick(){
+      alert(this.state.message);
+      this.setState({
+          message: ""
+      });
+  }
+
   render() {
     const { message } = this.state;
     return (
@@ -16,19 +35,10 @@ class EventPractice extends Component {
           name="message"
           placeholder="입력하세요"
           value={this.state.message}
-          onChange={(e) => {
-            this.setState({
-              message: e.target.value,
-            });
-          }}
+          onChange={this.handleChange}
         />
         <button
-          onClick={() => {
-            alert(message);
-            this.setState({
-              message: '',
-            });
-          }}
+          onClick={this.handleClick}
         >
           확인
         </button>
