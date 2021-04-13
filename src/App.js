@@ -1,8 +1,8 @@
 import React from 'react';
-import Counter from './hookSample/Counter';
+import Average from './hookSample/Average';
 
 const App = () => {
-  return <Counter />;
+  return <Average />;
 };
 
 export default App;
